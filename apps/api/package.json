@@ -1,0 +1,36 @@
+{
+  "name": "@pinksshots/api",
+  "private": true,
+  "scripts": {
+    "dev": "node ./node_modules/tsx/dist/cli.mjs watch src/index.ts",
+    "build": "tsc",
+    "lint": "pnpm exec eslint ./src",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "db:migrate:drizzle": "drizzle-kit up:pg",
+    "db:seed": "tsx src/db/seed.ts",
+    "db:studio": "drizzle-kit studio",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "@fastify/cookie": "^9.0.0",
+    "@fastify/cors": "^9.0.0",
+    "@fastify/session": "^10.0.0",
+    "bcrypt": "^5.1.0",
+    "drizzle-orm": "^0.29.0",
+    "fastify": "^4.28.0",
+    "postgres": "^3.4.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/bcrypt": "^6.0.0",
+    "@types/node": "^22.0.0",
+    "drizzle-kit": "^0.20.0",
+    "eslint": "^9.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

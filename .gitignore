@@ -1,0 +1,48 @@
+# Dependencies
+node_modules
+.pnpm-store
+.pnpm-debug.log*
+
+# Env and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Build outputs
+dist
+.next
+out
+.turbo
+*.tsbuildinfo
+apps/*/dist
+apps/*/.next
+apps/*/out
+
+# IDE
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage
+.nyc_output
+*.lcov
+
+# Misc
+.vercel
+.cache
+infrastructure/scripts/.x/*.mp3
